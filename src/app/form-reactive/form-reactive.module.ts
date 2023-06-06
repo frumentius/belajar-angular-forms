@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { FormReactiveRoutingModule } from './form-reactive-routing.module';
 import { FormReactiveComponent } from './form-reactive.component';
@@ -11,7 +12,8 @@ import { FormReactiveComponent } from './form-reactive.component';
   ],
   imports: [
     CommonModule,
-    FormReactiveRoutingModule
+    FormReactiveRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class FormReactiveModule { }
