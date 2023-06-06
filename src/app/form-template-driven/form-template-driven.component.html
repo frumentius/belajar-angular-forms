@@ -1,1 +1,13 @@
-<p>form-template-driven works!</p>
+<form #myFormTemplateDriven="ngForm" (ngSubmit)="submitForm(myFormTemplateDriven)">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" ngModel required>
+    <br/>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" ngModel required email>
+    <br/>
+    <button type="submit" [disabled]="!myFormTemplateDriven.valid">Submit</button>&nbsp;<button type="button" (click)="resetForm(myFormTemplateDriven)">Reset</button>
+</form>
+
+<div *ngIf="name !== ''">
+    <p>Halo nama saya, <strong>{{ name }}</strong>. Silahkan hubungi saya melalui alamat email <strong>{{ email }}</strong>.</p>
+</div>
